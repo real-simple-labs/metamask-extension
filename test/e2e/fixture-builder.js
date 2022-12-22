@@ -138,6 +138,7 @@ function defaultFixture() {
           '0x5': true,
           '0x539': true,
         },
+        openSeaTransactionSecurityProviderPopoverHasBeenShown: true,
       },
       CachedBalancesController: {
         cachedBalances: {
