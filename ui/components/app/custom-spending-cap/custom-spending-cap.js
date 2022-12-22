@@ -57,12 +57,22 @@ export default function CustomSpendingCap({
       return {
         className: 'custom-spending-cap__higherValue',
         description: t('inputLogicHigherNumber', [
-          <b key="custom-spending-cap-input-bold">
+          <Typography
+            key="custom-spending-cap-input-bold"
+            variant={TYPOGRAPHY.H6}
+            fontWeight={FONT_WEIGHT.BOLD}
+            className="custom-spending-cap__input-value-and-token-name"
+          >
             {currentTokenBalance} {tokenName}
-          </b>,
-          <b key="custom-spending-cap-future-bold">
+          </Typography>,
+          <Typography
+            key="custom-spending-cap-future-bold"
+            variant={TYPOGRAPHY.H6}
+            fontWeight={FONT_WEIGHT.BOLD}
+            className="custom-spending-cap__input-value-and-token-name"
+          >
             {inputNumber - currentTokenBalance} {tokenName}
-          </b>,
+          </Typography>,
         ]),
       };
     }
@@ -153,12 +163,12 @@ export default function CustomSpendingCap({
         >
           <label
             htmlFor={
-              value > (currentTokenBalance || error)
+              value > currentTokenBalance || error
                 ? 'custom-spending-cap-input-value'
                 : 'custom-spending-cap'
             }
             id={
-              value > (currentTokenBalance || error)
+              value > currentTokenBalance || error
                 ? 'custom-spending-cap-input-value'
                 : 'custom-spending-cap'
             }
@@ -168,7 +178,7 @@ export default function CustomSpendingCap({
               dataTestId="custom-spending-cap-input"
               wrappingLabelProps={{ as: 'div' }}
               id={
-                value > (currentTokenBalance || error)
+                value > currentTokenBalance || error
                   ? 'custom-spending-cap-input-value'
                   : 'custom-spending-cap'
               }
