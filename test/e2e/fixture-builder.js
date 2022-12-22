@@ -305,6 +305,7 @@ function onboardingFixture() {
           '0x5': true,
           '0x539': true,
         },
+        openSeaTransactionSecurityProviderPopoverHasBeenShown: true,
       },
       NetworkController: {
         network: '1337',
